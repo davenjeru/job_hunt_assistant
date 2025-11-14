@@ -44,7 +44,8 @@ class JobHuntAssistant:
     def resume_cl_task(self) -> Task:
         return Task(
             config=self.tasks_config['resume_cl_task'], # type: ignore[index]
-            output_file='src/job_hunt_assistant/data/resume_agent_output.txt'
+            output_file='src/job_hunt_assistant/data/resume_agent_output.txt',
+            context=[self.jd_analysis_task()]
         )
 
     @crew

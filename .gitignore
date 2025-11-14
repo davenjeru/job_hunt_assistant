@@ -3,4 +3,4 @@ __pycache__/
 .DS_Store
 
 src/job_hunt_assistant/data/report.md
-data/report.md
+src/job_hunt_assistant/data/resume_agent_output.txt

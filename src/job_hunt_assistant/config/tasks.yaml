@@ -13,10 +13,8 @@ jd_analysis_task:
 
 resume_cl_task:
   description: >
-    Based on the job summary below, tailor the candidate's resume summary and generate a personalized cover letter.
-    --- Job Summary ---
-    {job_summary}
-    
+    Based on the job summary from the previous task, tailor the candidate's resume summary and generate a personalized cover letter.
+        
     --- Resume Text ---
     {resume_text}
     

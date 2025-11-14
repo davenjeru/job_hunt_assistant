@@ -25,8 +25,15 @@ def run():
     first_job = jobs[0]['MatchedObjectDescriptor']
     job_description = first_job['UserArea']['Details']['JobSummary']
 
+    def load_resume(path="src/job_hunt_assistant/data/sample_resume.txt"):
+        with open(path, "r") as file:
+            return file.read()
+
+    resume_text = load_resume()
+
     inputs = {
         "job_description": job_description,
+        "resume_text": resume_text,
     }
 
     try:
