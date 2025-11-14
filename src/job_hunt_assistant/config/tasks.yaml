@@ -6,6 +6,28 @@ jd_analysis_task:
             - Any specific qualifications or eligibility
     Job Description: {job_description}
 
-  expected_output: A structured markdown summary containing sections for Qualifications, Required Skills, and Responsibilities.
+  expected_output: >
+    A structured markdown summary containing sections for Qualifications,
+    Required Skills, and Responsibilities.
   agent: jd_analyst
 
+resume_cl_task:
+  description: >
+    Based on the job summary below, tailor the candidate's resume summary and generate a personalized cover letter.
+    --- Job Summary ---
+    {job_summary}
+    
+    --- Resume Text ---
+    {resume_text}
+    
+    Your output should include:
+    1. Updated professional summary for resume
+    2. A personalized cover letter suitable for a government job
+
+  expected_output: >
+    <<RESUME_SUMMARY>>
+    [Your tailored 3-5 sentence resume summary here]
+
+    <<COVER_LETTER>>
+    [Your personalized cover letter here]
+  agent: resume_cl_agent

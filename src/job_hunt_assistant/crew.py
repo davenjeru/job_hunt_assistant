@@ -33,6 +33,20 @@ class JobHuntAssistant:
             output_file='src/job_hunt_assistant/data/report.md'
         )
 
+    @agent
+    def resume_cl_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['resume_cl_agent'], # type: ignore[index]
+            verbose=True
+        )
+
+    @task
+    def resume_cl_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['resume_cl_task'], # type: ignore[index]
+            output_file='src/job_hunt_assistant/data/resume_agent_output.txt'
+        )
+
     @crew
     def crew(self) -> Crew:
         """Creates the JobHuntAssistant crew"""
